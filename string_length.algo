@@ -30,9 +30,14 @@ BEGIN
     WHILE ((i<len) AND (str[i]=" ")) DO
         i:=i+1
     END_WHILE
-    j:=len
+    j:=len;
     WHILE ((i<len) AND (str[i]=" ")) DO
-        j:=j+1
+        j:=j-1;
+    END_WHILE
+    trim="";
+    WHILE (i<=j) DO
+        trim+=str[i];
+        i+=1
     END_WHILE
 
     RETURN value ;
