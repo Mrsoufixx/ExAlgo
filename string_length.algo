@@ -18,4 +18,22 @@ BEGIN
  str_length := str_length+1;
  nbr_words := nbr_words+1;
  Write("length of sentence:",str_length,",number of words:",nbr_words,",number of vowels:",nbr_vowels);
+
+END
+
+FUNCTION trimStr(str : STRING, len: INTEGER) : STRING
+VAR
+    i,j : INTEGER;
+    trim : STRING;
+BEGIN
+    i:=0;
+    WHILE ((i<len) AND (str[i]=" ")) DO
+        i:=i+1
+    END_WHILE
+    j:=len
+    WHILE ((i<len) AND (str[i]=" ")) DO
+        j:=j+1
+    END_WHILE
+
+    RETURN value ;
 END
